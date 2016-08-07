@@ -1,0 +1,6 @@
+CREATE USER '__USER__'@'%' IDENTIFIED BY '__PW__';
+CREATE DATABASE IF NOT EXISTS openhds;
+CREATE DATABASE IF NOT EXISTS odk_prod;
+GRANT ALL ON openhds.* TO '__USER__'@'%';
+GRANT ALL ON odk_prod.* TO '__USER__'@'%';
+flush privileges;
