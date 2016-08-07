@@ -13,13 +13,15 @@ Current status:
 Description of how development of this currently works:
 
 You build the docker container with the provided Dockerfile:
-1. cd docker-openhds
-2. docker build -t openhds-base
 
-To snoop around whats inside:
-1. docker run -it openhds-base /bin/bash
+1. `cd docker-openhds`
+2. `docker build -t openhds-base`
 
-Inside execute the initial setup script:
+To snoop around whats inside the container:
+
+1. `docker run -it openhds-base /bin/bash`
+
+Once inside, execute the initial setup script:
 `/opt/openhds/install/setup.sh`
 
 In the future we pull directly from dockerhub without using this repo:
