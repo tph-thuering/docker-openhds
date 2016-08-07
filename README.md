@@ -17,7 +17,8 @@ You build the docker container with the provided Dockerfile:
 1. `docker build git://github.com/tph-thuering/docker-openhds`
 
 > You need a .env file with credentials vars, for example [.env](https://raw.githubusercontent.com/tph-thuering/docker-openhds/master/.env.example)
-> Also give it a label for easier handling with the flag `-t`
+
+> Also give the container you want to build a label for easier handling with the flag `-t`
 
 Or if you want to build it locally:
 
