@@ -14,8 +14,16 @@ Description of how development of this currently works:
 
 You build the docker container with the provided Dockerfile:
 
-1. `cd docker-openhds`
-2. `docker build -t openhds-base .`
+1. `docker build git://github.com/tph-thuering/docker-openhds`
+
+> You need a .env file with credentials vars, for example [.env](https://raw.githubusercontent.com/tph-thuering/docker-openhds/master/.env.example)
+> Also give it a label for easier handling with the flag `-t`
+
+Or if you want to build it locally:
+
+1. `git clone git@github.com:tph-thuering/docker-openhds.git docker-openhds`
+2. `cd docker-openhds`
+3. `docker build -t openhds-base .`
 
 To snoop around whats inside the container:
 
@@ -26,12 +34,14 @@ Once inside, execute the initial setup script:
 
 In the future we pull directly from dockerhub without using this repo:
 
-```
+```bash
 docker pull SwissTPH/openhds
 docker run -t SwissTPH/openhds $opts
 ```
 
 
 Using docker-specific environment variables for initial setup (credentials) is recommended to enable portability.
+
 Usually you load them from .env in a development setup. `. .env` or `source .env` (linux)
+
 For production we might need to discuss on how to do this on all needed platforms.
