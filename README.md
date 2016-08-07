@@ -15,7 +15,7 @@ Description of how development of this currently works:
 You build the docker container with the provided Dockerfile:
 
 1. `cd docker-openhds`
-2. `docker build -t openhds-base`
+2. `docker build -t openhds-base .`
 
 To snoop around whats inside the container:
 
