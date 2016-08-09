@@ -7,6 +7,7 @@ ENV hostname data-management.local
 #ENV JAVA_HOME #java installation folder (optional)
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -yq \
   wget \
+  phpmyadmin \
   openssh-server \
   openjdk-7-jre-headless \
   mysql-server \
@@ -34,6 +35,8 @@ ADD openhds/ $workdir/openhds/
 # TODO: Remove this after prototype is stable and run docker with Environment variables ( -e var=value )
 ADD .env $workdir/
 
+# apache for phpmyadmin
+EXPOSE 80
 # tomcat
 EXPOSE 8080
 # mirth connect server

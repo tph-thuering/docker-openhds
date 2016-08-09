@@ -52,9 +52,26 @@ Once inside, execute the initial setup script:
 
 `/opt/openhds/install/setup.sh`
 
+This runs all other setup.sh scripts with parameters from the environment.
+
+There are currently the following variables (with defaults from `.env.example`):
+
+```bash
+MYSQL_USER=test
+MYSQL_PW=pw
+TOMCAT_USER=test
+TOMCAT_PW=pw
+MIRTH_USER=test
+MIRTH_PW=pw
+MIRTH_PORT=8082
+MIRTH_ADM_PORT=8443
+```
+
+Default port of tomcat is 8080 and apache 80.
+
 Using docker-specific environment variables for initial setup (credentials) is recommended to enable deployment portability.
 
-Usually you load them from .env in a development setup. `. .env` or `source .env`
+By convention you load them from `.env` in a development setup. `. .env` or `source .env`
 
 This sets all parameters from `.env`.
 
@@ -64,6 +81,6 @@ In the future a user pulls directly from dockerhub without using this git-repo:
 
 ```bash
 docker pull swisstph/openhds
-docker run -e "var=value" -p 8080:8080 -p 8082:8082 -p 8443:8443 -d -t swisstph/openhds
+docker run -e "var=value" -p 80:80 -p 8080:8080 -p 8082:8082 -p 8443:8443 -d -t swisstph/openhds
 ```
 
