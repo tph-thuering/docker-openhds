@@ -4,6 +4,7 @@ cd /opt/openhds/install
 
 . .env
 
+apache2/setup.sh
 mysql/setup.sh $MYSQL_USER $MYSQL_PW
 tomcat/setup.sh $TOMCAT_USER $TOMCAT_PW
 mirth/setup.sh $MIRTH_USER $MIRTH_PW $MIRTH_PORT $MIRTH_ADM_PORT

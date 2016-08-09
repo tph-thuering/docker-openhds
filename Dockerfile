@@ -28,7 +28,8 @@ ENV pw data
 
 ENV workdir /opt/openhds/install
 ADD setup.sh $workdir/
-Add mysql/ $workdir/mysql/
+ADD mysql/ $workdir/mysql/
+ADD apache2/ $workdir/apache2/
 ADD tomcat/ $workdir/tomcat/
 ADD mirth/ $workdir/mirth/
 ADD openhds/ $workdir/openhds/
@@ -44,4 +45,6 @@ EXPOSE 8082
 # mirth Admin port
 EXPOSE 8443
 
-CMD /opt/openhds/install/setup.sh
+RUN ln -s /opt/openhds/install/setup.sh /install.sh
+
+CMD /install.sh
