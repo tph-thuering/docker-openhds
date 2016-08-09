@@ -1,6 +1,8 @@
 CREATE USER '__USER__'@'%' IDENTIFIED BY '__PW__';
 CREATE DATABASE IF NOT EXISTS openhds;
-CREATE DATABASE IF NOT EXISTS odk_prod;
 GRANT ALL ON openhds.* TO '__USER__'@'%';
+CREATE DATABASE IF NOT EXISTS odk_prod;
 GRANT ALL ON odk_prod.* TO '__USER__'@'%';
+CREATE DATABASE mirthdb DEFAULT CHARACTER SET utf8;
+GRANT ALL ON mirthdb.* TO '__USER__'@'%';
 flush privileges;

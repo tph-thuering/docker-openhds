@@ -7,6 +7,7 @@ This prototype is meant to make that process as easy as possible with docker.
 Current status:
 * [X] Mysql Setup scripts
 * [ ] Tomcat6 Setup scripts
+* [ ] Mirth Setup scripts
 * [ ] OpenHDS Setup scripts
 * [ ] Functional Testing
 
