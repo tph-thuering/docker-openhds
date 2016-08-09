@@ -5,8 +5,7 @@ We want to be able to setup OpenHDS fast and easy.
 This prototype is meant to make that process as easy as possible with docker.
 
 ### Current status: ###
-* [ ] Apache Setup script
-  * [ ] PHPMyadmin user creation script
+* [X] Apache Setup script
 * [X] Mysql Setup scripts
   * [X] user setup (from environment vars) (one user for all tables)
   * [X] database schemas
@@ -24,6 +23,7 @@ This prototype is meant to make that process as easy as possible with docker.
   * [ ] HDSS Core XLSFORMS
   * [ ] Data Management SQL setup
   * [ ] Custom location hierarchy
+* [ ] Setup docker "forever" script and make sure services keep running
 * [ ] Functional Testing
 
 ### How to build this: ###
