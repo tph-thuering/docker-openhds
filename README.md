@@ -6,8 +6,17 @@ This prototype is meant to make that process as easy as possible with docker.
 
 Current status:
 * [X] Mysql Setup scripts
-* [ ] Tomcat6 Setup scripts
-* [ ] Mirth Setup scripts
+  * [X] user setup (from environment vars) (one user for all tables)
+  * [X] database schemas
+    * [X] openhds
+    * [X] odk_prod
+    * [X] mirthdb
+* [ ] Tomcat6 Setup scripts (issue: Tomcat init script prints fail, but works)
+  * [X] Installation script
+  * [ ] deploy openhds WAR-file through a deployment script
+* [X] Mirth Setup scripts
+  * [X] Installation script
+  * [ ] Channel import script
 * [ ] OpenHDS Setup scripts
 * [ ] Functional Testing
 
@@ -37,8 +46,8 @@ Once inside, execute the initial setup script:
 In the future we pull directly from dockerhub without using this repo:
 
 ```bash
-docker pull SwissTPH/openhds
-docker run -t SwissTPH/openhds $opts
+docker pull swisstph/openhds
+docker run -p 8080:8080 -p 8082:8082 -p 8443:8443 -d -t swisstph/openhds
 ```
 
 
